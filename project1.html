@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My First Web Page — Starter</title>
+  <meta name="description" content="Simple responsive starter page with calculator and contact form" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#">MySite</a>
+      <button id="nav-toggle" aria-expanded="false">Menu</button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="#calc-heading">Calculator</a></li>
+        <li><a href="#contact-heading">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Welcome</h1>
+    <p class="tagline">A simple, responsive & accessible starter page</p>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Calculator Section -->
+    <section aria-labelledby="calc-heading">
+      <h2 id="calc-heading">Simple Calculator</h2>
+      <p>Enter two numbers and click <strong>Add</strong>.</p>
+
+      <form id="add-form" onsubmit="return false;">
+        <label for="a">Number A</label>
+        <input id="a" name="a" type="number" required />
+
+        <label for="b">Number B</label>
+        <input id="b" name="b" type="number" required />
+
+        <button type="submit" id="add">Add</button>
+      </form>
+
+      <p>Result: <output id="result" aria-live="polite">—</output></p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <form id="contact-form" onsubmit="return false;">
+        <label for="name">Name</label>
+        <input id="name" required />
+        
+        <label for="email">Email</label>
+        <input id="email" type="email" required />
+        
+        <label for="msg">Message</label>
+        <textarea id="msg" rows="4" required></textarea>
+        
+        <button id="send">Send</button>
+      </form>
+      <p id="contact-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <small>Made by poreddy bhanu • Accessible • Responsive</small>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
